@@ -1,0 +1,59 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+@theme {
+    --container-9xl: 100rem;
+    --space: .25rem;
+}
+
+:root {
+    --ui-container: var(--container-9xl);
+    --ui-space: var(--space);
+}
+
+.suit-card {
+    & .background-blur {
+        background-size: cover;
+        background-position: center;
+        opacity: 0.3;
+        filter: blur(8px);
+        transition: opacity 0.25s ease-in-out;
+    }
+    & img {
+        object-fit: cover;
+        height: 100%;
+    }
+}
+
+.suit-card:hover{
+    & .background-blur {
+        opacity: 0.5;
+    }
+}
+
+.opacity-enter-active,
+.opacity-leave-active {
+    transition: opacity 0.5s ease;
+}
+
+.opacity-enter-from,
+.opacity-leave-to {
+    opacity: 0;
+}
+
+.opacity-card-enter-active,
+.opacity-card-leave-active {
+    transition: opacity 0.5s ease;
+}
+
+.opacity-card-enter-from,
+.opacity-card-leave-to {
+    opacity: 0;
+}
+
+.opacity-card-leave-active {
+    position: absolute;
+    display: none;
+
+
+}
